@@ -28,7 +28,8 @@
   </p>
 <% end %>
 
-
+<h3>New Beneficiary</h3>
+<%= render 'beneficiaries/form'%>
 
 <% if @policy.dead_person.nil? %>
   <%= link_to 'Back', policies_path %>

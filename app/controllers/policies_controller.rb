@@ -10,6 +10,7 @@ class PoliciesController < ApplicationController
   # GET /policies/1
   # GET /policies/1.json
   def show
+    @beneficiary = Beneficiary.new
   end
 
   # GET /policies/new
