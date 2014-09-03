@@ -1,4 +1,4 @@
 class Policy < ActiveRecord::Base
   belongs_to :dead_person
-  has_many :beneficiaries
+  has_may :beneficiaries
 end

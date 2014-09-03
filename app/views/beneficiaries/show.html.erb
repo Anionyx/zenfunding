@@ -37,8 +37,13 @@
 
 <p>
   <strong>Dead person:</strong>
-  <%= @beneficiary.dead_person.ssn %>
+  <%= @beneficiary.dead_people %>
 </p>
 
-<%= link_to 'Edit', edit_beneficiary_path(@beneficiary) %> |
-<%= link_to 'Back', beneficiaries_path %>
+<% if @beneficiary.policies.nil? %>
+  <%= link_to 'Back', beneficiaries_path %>
+<% else %>
+  <%= link_to 'Back', @beneficiary.policy %>
+<% end %>
+
+<%= link_to 'Edit', edit_beneficiary_path(@beneficiary) %> 

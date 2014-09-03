@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @policy_valuation.amount %>
+</p>
+
+<p>
+  <strong>Date assign:</strong>
+  <%= @policy_valuation.date_assign %>
+</p>
+
+<p>
+  <strong>Policy:</strong>
+  <%= @policy_valuation.policy %>
+</p>
+
+<p>
+  <strong>Dead person:</strong>
+  <%= @policy_valuation.dead_person %>
+</p>
+
+<%= link_to 'Edit', edit_policy_valuation_path(@policy_valuation) %> |
+<%= link_to 'Back', policy_valuations_path %>

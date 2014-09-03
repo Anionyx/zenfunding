@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :documents
+
+  resources :policy_valuations
+
+  resources :financials
+
   resources :beneficiaries
 
   resources :policies do

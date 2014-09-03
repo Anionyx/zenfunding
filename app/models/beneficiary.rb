@@ -3,5 +3,5 @@ class Beneficiary < ActiveRecord::Base
   has_many :policies 
   # we may find that a bene is associated with more than 1 deceased
   # but FOR NOW we'll assume associated with 1 deceased only
-  belongs_to :dead_person
+  has_many :dead_people, through: :policies
 end

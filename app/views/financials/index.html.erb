@@ -1,0 +1,39 @@
+<h1>Listing financials</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Transaction item</th>
+      <th>Dead person</th>
+      <th>Status</th>
+      <th>Date payment</th>
+      <th>Payment method</th>
+      <th>Description</th>
+      <th>Sequence</th>
+      <th>Amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @financials.each do |financial| %>
+      <tr>
+        <td><%= financial.transaction_item %></td>
+        <td><%= financial.dead_person %></td>
+        <td><%= financial.status %></td>
+        <td><%= financial.date_payment %></td>
+        <td><%= financial.payment_method %></td>
+        <td><%= financial.description %></td>
+        <td><%= financial.sequence %></td>
+        <td><%= financial.amount %></td>
+        <td><%= link_to 'Show', financial %></td>
+        <td><%= link_to 'Edit', edit_financial_path(financial) %></td>
+        <td><%= link_to 'Destroy', financial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Financial', new_financial_path %>
