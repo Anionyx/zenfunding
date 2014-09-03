@@ -1,18 +1,18 @@
-<h1>Listing dead_people</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name first</th>
-      <th>Name mid</th>
-      <th>Name last</th>
-      <th>Date death</th>
-      <th>Date birth</th>
-      <th>Ssn</th>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h1 class="panel-title">Listing Deceased</h1>
+  </div>  
+    <table class="table">
+      <th>Name First</th>
+      <th>Name Mid</th>
+      <th>Name Last</th>
+      <th>Date Death</th>
+      <th>Date Birth</th>
+      <th>SSN#</th>
       <th>Cause</th>
       <th colspan="3"></th>
-    </tr>
-  </thead>
+    </table>
+</div>
 
   <tbody>
     <% @dead_people.each do |dead_person| %>

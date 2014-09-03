@@ -24,6 +24,7 @@ default: &default
 development:
   <<: *default
   database: zenfunding_development
+  template: template0
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -38,7 +39,7 @@ development:
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
   #host: localhost
-
+   
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
   #port: 5432
@@ -83,3 +84,4 @@ production:
   database: zenfunding_production
   username: zenfunding
   password: <%= ENV['ZENFUNDING_DATABASE_PASSWORD'] %>
+  template: template0
