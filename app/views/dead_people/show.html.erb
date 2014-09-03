@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name first:</strong>
+  <%= @dead_person.name_first %>
+</p>
+
+<p>
+  <strong>Name mid:</strong>
+  <%= @dead_person.name_mid %>
+</p>
+
+<p>
+  <strong>Name last:</strong>
+  <%= @dead_person.name_last %>
+</p>
+
+<p>
+  <strong>Date death:</strong>
+  <%= @dead_person.date_death %>
+</p>
+
+<p>
+  <strong>Date birth:</strong>
+  <%= @dead_person.date_birth %>
+</p>
+
+<p>
+  <strong>Ssn:</strong>
+  <%= @dead_person.ssn %>
+</p>
+
+<p>
+  <strong>Cause:</strong>
+  <%= @dead_person.cause %>
+</p>
+
+<%= link_to 'Edit', edit_dead_person_path(@dead_person) %> |
+<%= link_to 'Back', dead_people_path %>

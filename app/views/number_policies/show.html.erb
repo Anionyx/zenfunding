@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Policy amount:</strong>
+  <%= @number_policy.policy_amount %>
+</p>
+
+<p>
+  <strong>Dead person:</strong>
+  <%= @number_policy.dead_person %>
+</p>
+
+<%= link_to 'Edit', edit_number_policy_path(@number_policy) %> |
+<%= link_to 'Back', number_policies_path %>

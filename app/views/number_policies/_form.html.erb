@@ -1,0 +1,25 @@
+<%= form_for(@number_policy) do |f| %>
+  <% if @number_policy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@number_policy.errors.count, "error") %> prohibited this number_policy from being saved:</h2>
+
+      <ul>
+      <% @number_policy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :policy_amount %><br>
+    <%= f.number_field :policy_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :dead_person_id %><br>
+    <%= f.text_field :dead_person_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
