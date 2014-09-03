@@ -80,8 +80,6 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: zenfunding_production
-  username: zenfunding
-  password: <%= ENV['ZENFUNDING_DATABASE_PASSWORD'] %>
-  template: template0
+  adapter: Postgresql 
+  encoding: unicode
+  database: zenfunding
