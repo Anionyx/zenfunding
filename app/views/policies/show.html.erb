@@ -15,6 +15,21 @@
   <%= @policy.dead_person.ssn %>
 </p>
 
+<h3>Beneficiaries</h3>
+<% @policy.beneficiaries.each do |beneficiary| %>
+  <p>
+    <strong>Beneficiary:</strong>
+    <%= beneficiary.name_first %>
+    <br>
+    <strong>Policy #1:</strong>
+    <%= beneficiary.policy_id %>
+    <br>
+    Added on: <%= beneficiary.created_at %>
+  </p>
+<% end %>
+
+
+
 <% if @policy.dead_person.nil? %>
   <%= link_to 'Back', policies_path %>
 <% else %>
