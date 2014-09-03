@@ -10,6 +10,7 @@ class DeadPeopleController < ApplicationController
   # GET /dead_people/1
   # GET /dead_people/1.json
   def show
+    @policy = Policy.new
   end
 
   # GET /dead_people/new

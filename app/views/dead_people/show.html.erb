@@ -35,5 +35,18 @@
   <%= @dead_person.cause %>
 </p>
 
+<h3>Policies</h3>
+<% @dead_person.policies.each do |policy| %>
+  <p>
+    <strong>Policy Number:</strong>
+    <%= policy.number_policy %>
+    <br>
+    Added on: <%= policy.created_at %>
+  </p>
+<% end %>
+
+<h3>New Policy</h3>
+<%= render 'policies/form' %>
+
 <%= link_to 'Edit', edit_dead_person_path(@dead_person) %> |
 <%= link_to 'Back', dead_people_path %>

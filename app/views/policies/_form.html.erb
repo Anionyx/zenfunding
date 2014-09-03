@@ -19,10 +19,14 @@
     <%= f.label :face_value %><br>
     <%= f.number_field :face_value %>
   </div>
-  <div class="field">
-    <%= f.label :dead_person_id %><br>
-    <%= f.text_field :dead_person_id %>
-  </div>
+  <% if @dead_person.nil? %>
+    <div class="field">
+      <%= f.label :dead_person_id %><br>
+      <%= f.text_field :dead_person_id %>
+    </div>
+  <% else %>
+      <%= f.hidden_field :dead_person_id, value: @dead_person.id %>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -11,9 +11,14 @@
 </p>
 
 <p>
-  <strong>Dead person:</strong>
-  <%= @policy.dead_person %>
+  <strong>Dead person SSN:</strong>
+  <%= @policy.dead_person.ssn %>
 </p>
 
+<% if @policy.dead_person.nil? %>
+  <%= link_to 'Back', policies_path %>
+<% else %>
+  <%= link_to 'Back', @policy.dead_person %>
+<% end %> 
+
 <%= link_to 'Edit', edit_policy_path(@policy) %> |
-<%= link_to 'Back', policies_path %>
