@@ -12,10 +12,7 @@
       <th>Policy</th>
       <th>Dead person</th>
       <th colspan="3"></th>
-  </table>
-</div>
 
-  <tbody>
     <% @beneficiaries.each do |beneficiary| %>
       <tr>
         <td><%= beneficiary.name_first %></td>
@@ -24,15 +21,16 @@
         <td><%= beneficiary.ssn %></td>
         <td><%= beneficiary.date_birth %></td>
         <td><%= beneficiary.date_death %></td>
-        <td><%= beneficiary.policy %></td>
+        <td><%= beneficiary.policy_id %></td>
         <td><%= beneficiary.dead_person %></td>
         <td><%= link_to 'Show', beneficiary %></td>
         <td><%= link_to 'Edit', edit_beneficiary_path(beneficiary) %></td>
         <td><%= link_to 'Destroy', beneficiary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+  </table>
+</div>
+
 
 <br>
 
