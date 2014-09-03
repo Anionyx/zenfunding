@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Policy amount</th>
+      <th>Face value</th>
       <th>Dead person</th>
       <th colspan="3"></th>
     </tr>
@@ -12,7 +12,7 @@
   <tbody>
     <% @number_policies.each do |number_policy| %>
       <tr>
-        <td><%= number_policy.policy_amount %></td>
+        <td><%= number_policy.face_value %></td>
         <td><%= number_policy.dead_person %></td>
         <td><%= link_to 'Show', number_policy %></td>
         <td><%= link_to 'Edit', edit_number_policy_path(number_policy) %></td>

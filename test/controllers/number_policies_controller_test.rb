@@ -18,7 +18,7 @@ class NumberPoliciesControllerTest < ActionController::TestCase
 
   test "should create number_policy" do
     assert_difference('NumberPolicy.count') do
-      post :create, number_policy: { dead_person_id: @number_policy.dead_person_id, policy_amount: @number_policy.policy_amount }
+      post :create, number_policy: { dead_person_id: @number_policy.dead_person_id, face_value: @number_policy.face_value }
     end
 
     assert_redirected_to number_policy_path(assigns(:number_policy))
@@ -35,7 +35,7 @@ class NumberPoliciesControllerTest < ActionController::TestCase
   end
 
   test "should update number_policy" do
-    patch :update, id: @number_policy, number_policy: { dead_person_id: @number_policy.dead_person_id, policy_amount: @number_policy.policy_amount }
+    patch :update, id: @number_policy, number_policy: { dead_person_id: @number_policy.dead_person_id, face_value: @number_policy.face_value }
     assert_redirected_to number_policy_path(assigns(:number_policy))
   end
 

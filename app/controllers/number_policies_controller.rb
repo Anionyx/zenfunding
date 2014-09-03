@@ -69,6 +69,6 @@ class NumberPoliciesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def number_policy_params
-      params.require(:number_policy).permit(:policy_amount, :dead_person_id)
+      params.require(:number_policy).permit(:face_value, :dead_person_id)
     end
 end
