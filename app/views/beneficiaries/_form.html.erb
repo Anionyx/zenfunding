@@ -1,0 +1,49 @@
+<%= form_for(@beneficiary) do |f| %>
+  <% if @beneficiary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@beneficiary.errors.count, "error") %> prohibited this beneficiary from being saved:</h2>
+
+      <ul>
+      <% @beneficiary.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name_first %><br>
+    <%= f.text_field :name_first %>
+  </div>
+  <div class="field">
+    <%= f.label :name_mid %><br>
+    <%= f.text_field :name_mid %>
+  </div>
+  <div class="field">
+    <%= f.label :name_last %><br>
+    <%= f.text_field :name_last %>
+  </div>
+  <div class="field">
+    <%= f.label :ssn %><br>
+    <%= f.text_field :ssn %>
+  </div>
+  <div class="field">
+    <%= f.label :date_birth %><br>
+    <%= f.date_select :date_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :date_death %><br>
+    <%= f.date_select :date_death %>
+  </div>
+  <div class="field">
+    <%= f.label :policy_id %><br>
+    <%= f.text_field :policy_id %>
+  </div>
+  <div class="field">
+    <%= f.label :dead_person_id %><br>
+    <%= f.text_field :dead_person_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

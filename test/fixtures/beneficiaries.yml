@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_first: MyString
+  name_mid: MyString
+  name_last: MyString
+  ssn: MyString
+  date_birth: 2014-09-02
+  date_death: 2014-09-02
+  policy_id: 
+  dead_person_id: 
+
+two:
+  name_first: MyString
+  name_mid: MyString
+  name_last: MyString
+  ssn: MyString
+  date_birth: 2014-09-02
+  date_death: 2014-09-02
+  policy_id: 
+  dead_person_id: 

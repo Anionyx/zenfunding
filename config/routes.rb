@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :policies
+  resources :beneficiaries
+
+  resources :policies do
+    resources :beneficiaries
+  end
 
   resources :dead_people do
     resources :policies
+    resources :beneficiaries
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

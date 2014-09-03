@@ -48,5 +48,18 @@
 <h3>New Policy</h3>
 <%= render 'policies/form' %>
 
+<h3>Beneficiaries</h3>
+<% @dead_person.beneficiaries.each do |beneficiary| %>
+  <p>
+    <strong>Beneficiary:</strong>
+    <%= beneficiary.name_first %>
+    <br>
+    <strong>Policy #1:</strong>
+    <%= beneficiary.policy_id %>
+    <br>
+    Added on: <%= beneficiary.created_at %>
+  </p>
+<% end %>
+
 <%= link_to 'Edit', edit_dead_person_path(@dead_person) %> |
 <%= link_to 'Back', dead_people_path %>

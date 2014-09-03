@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name first:</strong>
+  <%= @beneficiary.name_first %>
+</p>
+
+<p>
+  <strong>Name mid:</strong>
+  <%= @beneficiary.name_mid %>
+</p>
+
+<p>
+  <strong>Name last:</strong>
+  <%= @beneficiary.name_last %>
+</p>
+
+<p>
+  <strong>Ssn:</strong>
+  <%= @beneficiary.ssn %>
+</p>
+
+<p>
+  <strong>Date birth:</strong>
+  <%= @beneficiary.date_birth %>
+</p>
+
+<p>
+  <strong>Date death:</strong>
+  <%= @beneficiary.date_death %>
+</p>
+<!-- recall bene can be assiociated with many poilicies -->
+<p>
+  <strong>Policies:</strong>
+  <%= @beneficiary.policies %>
+</p>
+
+<p>
+  <strong>Dead person:</strong>
+  <%= @beneficiary.dead_person.ssn %>
+</p>
+
+<%= link_to 'Edit', edit_beneficiary_path(@beneficiary) %> |
+<%= link_to 'Back', beneficiaries_path %>

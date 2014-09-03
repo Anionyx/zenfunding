@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140903003021) do
+ActiveRecord::Schema.define(version: 20140903010850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "beneficiaries", force: true do |t|
+    t.string   "name_first"
+    t.string   "name_mid"
+    t.string   "name_last"
+    t.string   "ssn"
+    t.date     "date_birth"
+    t.date     "date_death"
+    t.integer  "policy_id"
+    t.integer  "dead_person_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "beneficiaries", ["dead_person_id"], name: "index_beneficiaries_on_dead_person_id", using: :btree
+  add_index "beneficiaries", ["policy_id"], name: "index_beneficiaries_on_policy_id", using: :btree
 
   create_table "dead_people", force: true do |t|
     t.string   "name_first"

@@ -1,0 +1,39 @@
+<h1>Listing beneficiaries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name first</th>
+      <th>Name mid</th>
+      <th>Name last</th>
+      <th>Ssn</th>
+      <th>Date birth</th>
+      <th>Date death</th>
+      <th>Policy</th>
+      <th>Dead person</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @beneficiaries.each do |beneficiary| %>
+      <tr>
+        <td><%= beneficiary.name_first %></td>
+        <td><%= beneficiary.name_mid %></td>
+        <td><%= beneficiary.name_last %></td>
+        <td><%= beneficiary.ssn %></td>
+        <td><%= beneficiary.date_birth %></td>
+        <td><%= beneficiary.date_death %></td>
+        <td><%= beneficiary.policy %></td>
+        <td><%= beneficiary.dead_person %></td>
+        <td><%= link_to 'Show', beneficiary %></td>
+        <td><%= link_to 'Edit', edit_beneficiary_path(beneficiary) %></td>
+        <td><%= link_to 'Destroy', beneficiary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Beneficiary', new_beneficiary_path %>
