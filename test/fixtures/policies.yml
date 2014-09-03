@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  number_policy: MyString
   face_value: 1
   dead_person_id: 
 
 two:
+  number_policy: MyString
   face_value: 1
   dead_person_id: 

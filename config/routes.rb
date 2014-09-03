@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :number_policies
+
+  resources :policies
 
   resources :dead_people
 
