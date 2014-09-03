@@ -42,7 +42,7 @@
     </div>
   <% else %>
       <%= f.label :policy_id %><br>
-      <%= f.text_field :policy_id, disabled: true, value: @policy.id %>
+      <%= f.text_field :policy_id, value: @policy.id %>
   <% end %>
   <br>
   <% if @policy.dead_person.nil? %>
@@ -52,7 +52,7 @@
     </div>
   <% else %>
       <%= f.label :dead_person_id %><br>
-      <%= f.text_field :dead_person_id, disabled: true, value: @policy.dead_person.id %>
+      <%= f.text_field :dead_person_id, value: @policy.dead_person.id %>
   <% end %>
 
   <div class="actions">

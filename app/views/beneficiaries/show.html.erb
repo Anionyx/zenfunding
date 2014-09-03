@@ -32,12 +32,12 @@
 <!-- recall bene can be assiociated with many poilicies -->
 <p>
   <strong>Policies:</strong>
-  <%= @beneficiary.policies %>
+  <%= @beneficiary.policy.number_policy %>
 </p>
 
 <p>
   <strong>Dead person:</strong>
-  <%= @beneficiary.dead_people %>
+  <%= @beneficiary.dead_person_id %>
 </p>
 
 <% if @beneficiary.policies.nil? %>
