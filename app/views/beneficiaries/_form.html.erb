@@ -45,7 +45,7 @@
       <%= f.text_field :policy_id, value: @policy.id %>
   <% end %>
   <br>
-  <% if @policy.dead_person.nil? %>
+  <% if @policy.dead_person_id.nil? %>
     <div class="field">
       <%= f.label :dead_person_id %><br>
       <%= f.text_field :dead_person_id %>

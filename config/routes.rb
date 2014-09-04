@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'dead_people#index'
+  
   resources :documents
 
   resources :policy_valuations
