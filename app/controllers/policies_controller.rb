@@ -29,7 +29,7 @@ class PoliciesController < ApplicationController
 
     respond_to do |format|
       if @policy.save
-        format.html { redirect_to @policy, notice: 'Policy was successfully created.' }
+        format.html { redirect_to @policy.dead_person, notice: 'Policy was successfully created.' }
         format.json { render :show, status: :created, location: @policy }
       else
         format.html { render :new }
