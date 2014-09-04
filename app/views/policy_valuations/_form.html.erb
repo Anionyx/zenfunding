@@ -1,0 +1,33 @@
+<%= form_for(@policy_valuation) do |f| %>
+  <% if @policy_valuation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@policy_valuation.errors.count, "error") %> prohibited this policy_valuation from being saved:</h2>
+
+      <ul>
+      <% @policy_valuation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :amount %><br>
+    <%= f.number_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :date_assign %><br>
+    <%= f.date_select :date_assign %>
+  </div>
+  <div class="field">
+    <%= f.label :policy_id %><br>
+    <%= f.text_field :policy_id %>
+  </div>
+  <div class="field">
+    <%= f.label :dead_person_id %><br>
+    <%= f.text_field :dead_person_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

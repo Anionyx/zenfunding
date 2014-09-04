@@ -28,7 +28,7 @@ class BeneficiariesController < ApplicationController
 
     respond_to do |format|
       if @beneficiary.save
-        format.html { redirect_to @beneficiary, notice: 'Beneficiary was successfully created.' }
+        format.html { redirect_to @beneficiary.policy, notice: 'Beneficiary was successfully created.' }
         format.json { render :show, status: :created, location: @beneficiary }
       else
         format.html { render :new }

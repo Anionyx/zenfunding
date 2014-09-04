@@ -32,13 +32,18 @@
 <!-- recall bene can be assiociated with many poilicies -->
 <p>
   <strong>Policies:</strong>
-  <%= @beneficiary.policies %>
+  <%= @beneficiary.policy.number_policy %>
 </p>
 
 <p>
   <strong>Dead person:</strong>
-  <%= @beneficiary.dead_person.ssn %>
+  <%= @beneficiary.dead_person_id %>
 </p>
 
-<%= link_to 'Edit', edit_beneficiary_path(@beneficiary) %> |
-<%= link_to 'Back', beneficiaries_path %>
+<% if @beneficiary.policies.nil? %>
+  <%= link_to 'Back', beneficiaries_path %>
+<% else %>
+  <%= link_to 'Back', @beneficiary.policy %>
+<% end %>
+
+<%= link_to 'Edit', edit_beneficiary_path(@beneficiary) %> 

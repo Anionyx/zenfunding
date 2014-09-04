@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  root 'dead_people#index'
+  resources :documents
+
+  resources :policy_valuations
+
+  resources :financials
 
   devise_for :users
     resources :users, only: [:update]
@@ -8,11 +14,14 @@ Rails.application.routes.draw do
 
   resources :policies do
     resources :beneficiaries
+    resources :policy_valuations
   end
 
   resources :dead_people do
     resources :policies
     resources :beneficiaries
+    resources :documents
+    resources :financials
   end
 
   root to: "welcome#index"

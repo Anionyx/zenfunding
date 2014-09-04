@@ -21,8 +21,10 @@
         <td><%= beneficiary.ssn %></td>
         <td><%= beneficiary.date_birth %></td>
         <td><%= beneficiary.date_death %></td>
-        <td><%= beneficiary.policy_id %></td>
-        <td><%= beneficiary.dead_person %></td>
+
+        <td><%= beneficiary.policies %></td>
+        <td><%= beneficiary.dead_people %></td>
+
         <td><%= link_to 'Show', beneficiary %></td>
         <td><%= link_to 'Edit', edit_beneficiary_path(beneficiary) %></td>
         <td><%= link_to 'Destroy', beneficiary, method: :delete, data: { confirm: 'Are you sure?' } %></td>

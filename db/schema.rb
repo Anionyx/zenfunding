@@ -11,7 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140903052435) do
+
+ActiveRecord::Schema.define(version: 20140903035614) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,14 +46,33 @@ ActiveRecord::Schema.define(version: 20140903052435) do
     t.datetime "updated_at"
   end
 
-  create_table "number_policies", force: true do |t|
-    t.integer  "policy_amount"
+  create_table "documents", force: true do |t|
+    t.string   "name"
     t.integer  "dead_person_id"
+    t.integer  "beneficiary_id"
+    t.integer  "policy_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "number_policies", ["dead_person_id"], name: "index_number_policies_on_dead_person_id", using: :btree
+  add_index "documents", ["beneficiary_id"], name: "index_documents_on_beneficiary_id", using: :btree
+  add_index "documents", ["dead_person_id"], name: "index_documents_on_dead_person_id", using: :btree
+  add_index "documents", ["policy_id"], name: "index_documents_on_policy_id", using: :btree
+
+  create_table "financials", force: true do |t|
+    t.string   "transaction_item"
+    t.integer  "dead_person_id"
+    t.string   "status"
+    t.date     "date_payment"
+    t.string   "payment_method"
+    t.string   "description"
+    t.integer  "sequence"
+    t.string   "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "financials", ["dead_person_id"], name: "index_financials_on_dead_person_id", using: :btree
 
   create_table "policies", force: true do |t|
     t.string   "number_policy"
@@ -63,6 +84,7 @@ ActiveRecord::Schema.define(version: 20140903052435) do
 
   add_index "policies", ["dead_person_id"], name: "index_policies_on_dead_person_id", using: :btree
 
+<<<<<<< HEAD
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -79,11 +101,23 @@ ActiveRecord::Schema.define(version: 20140903052435) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+=======
+  create_table "policy_valuations", force: true do |t|
+    t.integer  "amount"
+    t.date     "date_assign"
+    t.integer  "policy_id"
+    t.integer  "dead_person_id"
+>>>>>>> upstream/master
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+=======
+  add_index "policy_valuations", ["dead_person_id"], name: "index_policy_valuations_on_dead_person_id", using: :btree
+  add_index "policy_valuations", ["policy_id"], name: "index_policy_valuations_on_policy_id", using: :btree
+>>>>>>> upstream/master
 
 end

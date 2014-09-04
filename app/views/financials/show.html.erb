@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Transaction item:</strong>
+  <%= @financial.transaction_item %>
+</p>
+
+<p>
+  <strong>Dead person:</strong>
+  <%= @financial.dead_person %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @financial.status %>
+</p>
+
+<p>
+  <strong>Date payment:</strong>
+  <%= @financial.date_payment %>
+</p>
+
+<p>
+  <strong>Payment method:</strong>
+  <%= @financial.payment_method %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @financial.description %>
+</p>
+
+<p>
+  <strong>Sequence:</strong>
+  <%= @financial.sequence %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @financial.amount %>
+</p>
+
+<%= link_to 'Edit', edit_financial_path(@financial) %> |
+<%= link_to 'Back', financials_path %>

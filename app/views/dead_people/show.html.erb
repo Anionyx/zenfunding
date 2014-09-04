@@ -40,8 +40,6 @@
   <p>
     <strong>Policy Number:</strong>
     <%= policy.number_policy %>
-    <br>
-    Added on: <%= policy.created_at %>
   </p>
 <% end %>
 
@@ -56,10 +54,8 @@
     <br>
     <strong>Policy #1:</strong>
     <%= beneficiary.policy_id %>
-    <br>
-    Added on: <%= beneficiary.created_at %>
   </p>
 <% end %>
 
-<%= link_to 'Edit', edit_dead_person_path(@dead_person) %> |
+<%= link_to 'Edit', edit_dead_person_path(@dead_person) %> 
 <%= link_to 'Back', dead_people_path %>

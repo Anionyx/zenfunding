@@ -35,14 +35,26 @@
     <%= f.label :date_death %><br>
     <%= f.date_select :date_death %>
   </div>
-  <div class="field">
-    <%= f.label :policy_id %><br>
-    <%= f.text_field :policy_id %>
-  </div>
-  <div class="field">
-    <%= f.label :dead_person_id %><br>
-    <%= f.text_field :dead_person_id %>
-  </div>
+  <% if @policy.nil? %>
+    <div class="field">
+      <%= f.label :policy_id %><br>
+      <%= f.text_field :policy_id %>
+    </div>
+  <% else %>
+      <%= f.label :policy_id %><br>
+      <%= f.text_field :policy_id, value: @policy.id %>
+  <% end %>
+  <br>
+  <% if @policy.dead_person.nil? %>
+    <div class="field">
+      <%= f.label :dead_person_id %><br>
+      <%= f.text_field :dead_person_id %>
+    </div>
+  <% else %>
+      <%= f.label :dead_person_id %><br>
+      <%= f.text_field :dead_person_id, value: @policy.dead_person.id %>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

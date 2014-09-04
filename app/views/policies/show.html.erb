@@ -12,7 +12,9 @@
 
 <p>
   <strong>Dead person SSN:</strong>
-  <%= @policy.dead_person_id %>
+
+  <%= @policy.dead_person.name_first %>
+
 </p>
 
 <h3>Beneficiaries</h3>
@@ -23,12 +25,11 @@
     <br>
     <strong>Policy #1:</strong>
     <%= beneficiary.policy_id %>
-    <br>
-    Added on: <%= beneficiary.created_at %>
   </p>
 <% end %>
 
-
+<h3>New Beneficiary</h3>
+<%= render 'beneficiaries/form'%>
 
 <% if @policy.dead_person.nil? %>
   <%= link_to 'Back', policies_path %>

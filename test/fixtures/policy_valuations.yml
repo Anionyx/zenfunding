@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1
+  date_assign: 2014-09-02
+  policy_id: 
+  dead_person_id: 
+
+two:
+  amount: 1
+  date_assign: 2014-09-02
+  policy_id: 
+  dead_person_id: 
